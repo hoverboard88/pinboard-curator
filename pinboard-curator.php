@@ -291,7 +291,9 @@ if (!class_exists("PinboardCurator")) {
 		}
 
 		public function init_pinboard_curator_admin() {
-			add_options_page(__('Pinboard Curator Settings', "pinboardcurator"), __('Pinboard Curator', "pinboardcurator"), 'manage_options', basename(__FILE__), array(&$this, 'pinboard_curator_admin_page') );
+
+			add_management_page( __('Pinboard Curator Settings', "pinboardcurator"), __('Pinboard Curator', "pinboardcurator"), 'manage_options', basename(__FILE__), array(&$this, 'pinboard_curator_admin_page'));
+
 		}
 
 	}
@@ -329,4 +331,3 @@ function wi_add_weekly_schedule( $schedules ) {
 // 	error_log(print_r($args, true));
 //   }
 // }
-
