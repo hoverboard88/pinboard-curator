@@ -4,7 +4,7 @@ Pinboard Curator
 This plugin was forked from windyjonas' [Delicious Curator Wordpress Plugin](https://wordpress.org/plugins/delicious-curator/). I essentially did a search and replace for "Delicious" and changed the RSS feed link it pulls from. Thanks to windyjonas for doing pretty much all of the work on this plugin. Please donate to him below.
 
 Contributors: windyjonas, rtvenge
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jonas%2enordstrom%40gmail%2ecom&lc=SE&item_name=Jonas%20Nordstrom%2c%20Windy%20Media&item_number=pinboard%2dcurator&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jonas%2enordstrom%40gmail%2ecom&lc=SE&item_name=Jonas%20Nordstrom%2c%20Windy%20Media&item_number=pinboard%2dcurator&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 Tags: pinboard, curating, bookmarks
 Requires at least: 3.3
 Tested up to: 3.3.2
