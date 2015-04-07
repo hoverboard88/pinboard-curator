@@ -47,6 +47,7 @@ if (!class_exists("PinboardCurator")) {
 									'%LINK%'                =>      'link for the feed item',
 									'%DATE%'                =>      'item publish date',
 									'%NOTE%'                =>      'feed note',
+									'%SOURCE%'							=>			'link source'
 									);
 			$this->title_elements = array (
 									'%DATE%'                =>      'post publish date'
@@ -134,6 +135,7 @@ if (!class_exists("PinboardCurator")) {
 					foreach ($new_items as $item) {
 
 						$item_date = date(get_option("date_format"), $item["entry_time"]);
+						$item_source = parse_url($item["link"], PHP_URL_HOST);
 
 						if ($item["entry_time"] > $prev_max_date) {
 
@@ -147,6 +149,7 @@ if (!class_exists("PinboardCurator")) {
 								$item["link"],
 								$item_date,
 								$item["description"],
+								$item_source
 								), $import );
 							$post_content.= $import;
 							$items_posted++;
