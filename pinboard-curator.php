@@ -47,7 +47,7 @@ if (!class_exists("PinboardCurator")) {
 				'%LINK%'                =>      'link for the feed item',
 				'%DATE%'                =>      'item publish date',
 				'%NOTE%'                =>      'feed note',
-				'%SOURCE%'							=>			'link source'
+				'%SOURCE%'							=>			'link (website root url)'
 				);
 			$this->title_elements = array (
 				'%DATE%'                =>      'post publish date'
@@ -158,8 +158,14 @@ if (!class_exists("PinboardCurator")) {
 
 					if ( $items_posted > 0 ) {
 						$post_title = str_replace( array_keys ( $this->title_elements ), date(get_option("date_format")), $post_title);
+						// if title doesn't contain the date, append a date to slug for uniqueness.
+						if (!strstr(get_option('pinboard-curator-post-title'), '%DATE%')) {
+							$slug_date = '-' . date('m-d-Y');
+						}
+
 						$my_post = array(
 							'post_title' => $post_title,
+							'post_name' => str_replace(' ', '-', strtolower($post_title)) . $slug_date,
 							'post_content' => $header . $post_content . $footer,
 							'post_status' => 'draft',
 							'post_category' => array($category),
