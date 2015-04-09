@@ -43,15 +43,15 @@ if (!class_exists("PinboardCurator")) {
 			$this->pinboard_user = get_option('pinboard-curator-pinboard-user', '10');
 			$this->pinboard_tag = get_option('pinboard-curator-pinboard-tag', '10');
 			$this->item_elements = array (
-									'%TITLE%'               =>      'feed item title',
-									'%LINK%'                =>      'link for the feed item',
-									'%DATE%'                =>      'item publish date',
-									'%NOTE%'                =>      'feed note',
-									'%SOURCE%'							=>			'link source'
-									);
+				'%TITLE%'               =>      'feed item title',
+				'%LINK%'                =>      'link for the feed item',
+				'%DATE%'                =>      'item publish date',
+				'%NOTE%'                =>      'feed note',
+				'%SOURCE%'							=>			'link source'
+				);
 			$this->title_elements = array (
-									'%DATE%'                =>      'post publish date'
-									);
+				'%DATE%'                =>      'post publish date'
+				);
 		}
 
 		// initialization, setup localization
